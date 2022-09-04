@@ -26,4 +26,99 @@ list(range(2, 14, 4))
 
 '''
 
+# LISTS IN PYTHON
+'''
+In Python, lists are a versatile data type that can contain multiple different data types within the same square brackets. The possible data types within a list include numbers, strings, other objects, and even other lists.
+'''
 
+# Adding Lists Together
+items = ['cake', 'cookie', 'bread']
+total_items = items + ['biscuit', 'tart']
+print(total_items)
+# Result: ['cake', 'cookie', 'bread', 'biscuit', 'tart']
+
+# List Methods:
+# append()
+orders = ['daisies', 'periwinkle']
+orders.append('tulips')
+print(orders)
+# Result: ['daisies', 'periwinkle', 'tulips']
+
+# remove()
+
+# count()
+#We use the count() function to find the number of occurrences for each item.
+
+#If we want to know how many times i appears in this word, we can use the list method called .count():
+
+backpack = ['pencil', 'pen', 'notebook', 'textbook', 'pen', 'highlighter', 'pen']
+numPen = backpack.count('pen')
+
+print(numPen)
+# Output: 3
+
+# List Negative Indices:
+soups = ['minestrone', 'lentil', 'pho', 'laksa']
+soups[-1]   # 'laksa'
+soups[-3:]  # 'lentil', 'pho', 'laksa'
+soups[:-2]  # 'minestrone', 'lentil'
+
+# Modifying & Accessing 2D Lists
+# A 2D list of names and hobbies
+class_name_hobbies = [["Jenny", "Breakdancing"], ["Alexus", "Photography"], ["Grace", "Soccer"]]
+
+# The sublist of Jenny is at index 0. The hobby is at index 1 of the sublist. 
+class_name_hobbies[0][1] = "Meditation"
+print(class_name_hobbies)
+
+# Insert()
+'''
+It takes in two inputs:
+
+The index that you want to insert into.
+The element that you want to insert at the specified index.
+'''
+# Pop()
+# Len()
+# Sort()
+# Note: The .sort() method does not return any value and thus does not need to be assigned to a variable since it modifies the list directly. If we do assign the result of the method, it would assign the value of None to the variable.
+'''
+The Python sorted() function accepts a list as an argument, and will return a new, sorted list containing the same elements as the original.
+Sorted does not modify the original, unsorted list.
+'''
+
+# Output
+# [["Jenny", "Meditation"], ["Alexus", "Photography"], ["Grace", "Soccer"]]
+
+# 2D list of people's heights
+heights = [["Noelle", 61], ["Ali", 70], ["Sam", 67]]
+# Access the sublist at index 0, and then access the 1st index of that sublist. 
+noelles_height = heights[0][1] 
+print(noelles_height)
+
+'''
+List Slicing
+
+If we want to select the first n (n=number) elements of a list, we could use the following code:
+
+fruits[:n] (take the firsts)
+
+fruits[n:] (take anything but the firsts)
+
+To get an element of a list, use the syntax list[n], where n is the index of the item you want to get. 
+
+Remember that list indices start at zero!
+
+We can do something similar when we want to slice the last n elements in a list:
+
+fruits[-n:] (take the lasts)
+
+Negative indices can also accomplish taking all but n last elements of a list.
+
+fruits[:-n] (all but last)
+
+Which of the following code selects the last three elements of mylist?
+fruits[-3:]
+We can use negative indexes to count backwards from the last element in a list.
+
+'''
