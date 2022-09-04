@@ -178,5 +178,4 @@ key=lambda x: x[1]) #lambda in python is an inline anonymous function and in thi
 
 Example: pizza_and_prices = [["pepperoni", 2], ["pineapple", 6], ["cheese", 1], ["sausage", 3], ["olives", 2], ["anchovies", 7], ["mushrooms", 2]]
 
-
 '''
