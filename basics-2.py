@@ -78,6 +78,44 @@ It takes in two inputs:
 The index that you want to insert into.
 The element that you want to insert at the specified index.
 '''
+# Zip()
+'''
+Zip () 
+
+The zip() function allow us to combine two lists into an iterator of tuples with the list elements paired together.
+The zip() function takes two (or more) lists as inputs and returns an object that contains a list of pairs.
+
+'''
+# Dict Comprehensions with Zips:
+names = ['Jenny', 'Alexus', 'Sam', 'Grace']
+heights = [61, 70, 67, 64]
+
+students = {key:value for key, value in zip(names, heights)}
+#students is now {'Jenny': 61, 'Alexus': 70, 'Sam': 67, 'Grace': 64}
+
+'''
+Takes a pair from the iterator of tuples
+Names the elements in the pair key (the one originally from the names list) and value (the one originally from the heights list)
+Creates a key : value item in the students dictionary
+Repeats steps 1-3 for the entire iterator of pairs
+
+'''
+# Convert Zip from Memory:
+
+# An iterator of pairs between name list and height list:
+
+names_and_heights = zip(names, heights)
+
+print(names_and_heights)
+
+# Would output: <zip object at 0x7f1631e86b48>
+
+# This zip object contains the location of this variable in our computer’s memory.
+
+# In order to print zip list, use List()
+converted_list = list(names_and_heights)
+print(converted_list)
+
 # Pop()
 # Len()
 # Sort()
@@ -85,6 +123,12 @@ The element that you want to insert at the specified index.
 '''
 The Python sorted() function accepts a list as an argument, and will return a new, sorted list containing the same elements as the original.
 Sorted does not modify the original, unsorted list.
+
+The sorted() function is different from the .sort() method in two ways:
+
+It comes before a list, instead of after as all built-in functions do.
+It generates a new list rather than modifying the one that already exists.
+
 '''
 
 # Output
@@ -120,5 +164,19 @@ fruits[:-n] (all but last)
 Which of the following code selects the last three elements of mylist?
 fruits[-3:]
 We can use negative indexes to count backwards from the last element in a list.
+
+'''
+
+# Bonus: Lambda in python to sort lists
+
+'''
+How to sort a list of lists by the fourth element in each list?
+
+pizza_and_prices.sort(key=lambda x: x[1])
+
+key=lambda x: x[1]) #lambda in python is an inline anonymous function and in this case it returns the second element of the list (so you can access prices in nested list below)
+
+Example: pizza_and_prices = [["pepperoni", 2], ["pineapple", 6], ["cheese", 1], ["sausage", 3], ["olives", 2], ["anchovies", 7], ["mushrooms", 2]]
+
 
 '''
