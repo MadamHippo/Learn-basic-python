@@ -104,3 +104,57 @@ while index < length:
 # Increment index to access the next element in ingredients
 # Each iteration gets closer to making the conditional no longer true
 
+# Elegant Loops in Python vs Normal Versions:
+
+# Normal version:
+
+while count <= 3:
+  print(count)
+  count += 1
+
+# Python allows us to write elegant one-line while loops: 
+
+while count <= 3: print(count); count += 1
+
+# For Loops [normal version]
+
+numbers = [2, -1, 79, 33, -45]
+doubled = []
+ 
+for number in numbers:
+  doubled.append(number * 2)
+ 
+print(doubled)
+
+# For Loops [Elegant]
+
+numbers = [2, -1, 79, 33, -45]
+doubled = [num * 2 for num in numbers]
+print(doubled)
+
+#Template:
+new_list = [<expression> for <element> in <collection>]
+
+# Conditionals with Elegant List Comprehensions:
+
+# List Comprehensions are very flexible. We even can expand our examples to incorporate conditional logic.
+
+# For Loops [normal version] Conditional
+
+numbers = [2, -1, 79, 33, -45]
+only_negative_doubled = []
+ 
+for num in numbers:
+  if num < 0: 
+    only_negative_doubled.append(num * 2)
+ 
+print(only_negative_doubled) 
+
+
+# For Loops [Elegant] Elegant:
+
+numbers = [2, -1, 79, 33, -45]
+negative_doubled = [num * 2 for num in numbers if num < 0]
+print(negative_doubled)
+
+# Same output for both numbers would be [-2, -90]. You can also use If-Else along with If.
