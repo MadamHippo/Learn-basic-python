@@ -317,3 +317,18 @@ for number in numbers:
   doubled.append(number * 2)
  
 print(doubled)
+    
+'''
+
+List Comprehensions: Conditionals
+
+Conditionals are like ‘if, else, and elifs’
+
+So in this example, these are heights and if you’re taller than 161 you can ride a cool roller coaster! To run through the list of shorties, you do a conditional loop.
+'''
+    
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+
+can_ride_coaster = [height for height in heights if height > 161]
+print(can_ride_coaster)
+
