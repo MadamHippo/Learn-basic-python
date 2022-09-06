@@ -222,6 +222,98 @@ Prints out...ages
 21
 67
 41
+
+Nested Loops:
+
+In Python, loops can be nested inside other loops. Nested loops can be used to access items of lists which are inside other lists. The item selected from the outer loop can be used as the list for the inner loop to iterate over.
+'''
+
+groups = [["Jobs", "Gates"], ["Newton", "Euclid"], ["Einstein", "Feynman"]]
+ 
+# This outer loop will iterate over each list in the groups list 
+
+for group in groups:
+
+  # This inner loop will go through each name in each list
+
+  for name in group:
+   
+ print(name)
+
+# Example:
+
+sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+
+scoops_sold = 0
+
+for location in sales_data:
+  print(location)
+  for sales in location:
+    scoops_sold += sales     
+ #this one is a more elegant way of writing item1 + item2 = item2
+#adding all the numbers from all the lists from scoops_sold
+print(scoops_sold)
+
+'''    
+Python List Comprehension
+
+Python list comprehensions provide a concise way for creating lists. It consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses: 
+
+[EXPRESSION for ITEM in LIST <if CONDITIONAL>].
+
+The expressions can be anything - any kind of object can go into a list.
+
+A list comprehension always returns a list.
+
+'''
+# List comprehension for the squares of all even numbers between 0 and 9
+result = [x**2 for x in range(10) if x % 2 == 0]
+
+print(result)
+# [0, 4, 16, 36, 64]
+    
+    
+
+# List Comprehensions: Elegant List Loops
+
+grades = [90, 88, 62, 76, 74, 89, 48, 57]
+
+scaled_grades = [grade + 10 for grade in grades]
+print(scaled_grades)
+
+# Or
+
+new_prices = [price - 5 for price in prices]
+print(new_prices)
+
+# Explanation of the example above:
+
+# Re-examine the general structure of a list comprehension:
+
+new_list = [<expression> for <element> in <collection>]
+
+
+# A list comprehension always returns a list.
+
+'''
+In our case:
+
+The <expression> will be our formula using our grade variable plus ten extra points: grade + 10
+
+
+<element> can be any name you want. Since each element represents a grade, it makes sense to call it grade
+
+
+Our <collection> is the list we want to loop through: grades
+
+
+Is the same (and more elegant way of writing this: 
 '''
     
+numbers = [2, -1, 79, 33, -45]
+doubled = []
  
+for number in numbers:
+  doubled.append(number * 2)
+ 
+print(doubled)
