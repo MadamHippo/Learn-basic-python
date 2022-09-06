@@ -151,10 +151,77 @@ for num in numbers:
 print(only_negative_doubled) 
 
 
-# For Loops [Elegant] Elegant:
+# For Loops [Elegant]:
 
 numbers = [2, -1, 79, 33, -45]
 negative_doubled = [num * 2 for num in numbers if num < 0]
 print(negative_doubled)
 
 # Same output for both numbers would be [-2, -90]. You can also use If-Else along with If.
+
+
+# For Loop vs While Loop:
+
+# Basic While Loop Example:
+
+i = 1
+while i < 11:
+  print(i)
+  i += 1
+
+# Basic For Loop Example:
+
+for i in range(1, 11):
+  print(i)
+
+# Loops to Countdown: 
+
+countdown = 10
+print("STARTING COUNTDOWN!")
+while countdown >= 0:
+  print(countdown)
+  countdown -= 1
+print("We have liftoff!")
+
+# Example of Loops through List
+while index < length:
+  print("I am learning about " + (python_topics[index]))
+  index += 1
+  
+'''
+Control Statements
+
+Breaking Loops:
+
+The Python Break statement can be used to terminate the execution of a loop. It can only appear within a for or while loop. It allows us to break out of the nearest enclosing loop. If the loop has an else clause, then the code block associated with it will not be executed if we use the break statement.
+
+The break statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+
+If the break statement is inside a nested loop (loop inside another loop), the break statement will terminate the innermost loop.
+
+'''
+
+# Continue Loops:
+
+# The continue statement is used to skip the rest of the code inside a loop for the current iteration only. Loop does not terminate but continues on with the next iteration.
+
+ages = [12, 38, 34, 26, 21, 19, 67, 41, 17]
+
+for drinking_age in ages:
+  if drinking_age < 21: (#this means if your drinking age is LESS than 21 that you should stop. Otherwise do continue.)
+    continue
+  print(drinking_age)
+
+# the continue statement it simply moved to the next iteration of the list and thus never reached the print statement.
+
+'''
+Prints out...ages
+38
+34
+26
+21
+67
+41
+'''
+    
+ 
