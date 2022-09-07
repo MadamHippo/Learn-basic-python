@@ -132,3 +132,65 @@ for flight in flights:
   codes_b.append(code)
 print(codes_b)
 
+'''
+An example of real world problem (using loops and elif/else statments with functions):
+Let’s try a tricky challenge involving removing elements from a list. This function will repeatedly remove the first element of a list until it finds an odd number or runs out of elements. It will accept a list of numbers as an input parameter and return the modified list where any even numbers at the beginning of the list are removed. To do this, we will need the following steps:
+
+Define our function to accept a single input parameter lst which is a list of numbers
+Loop through every number in the list if there are still numbers in the list and if we haven’t hit an odd number yet
+Within the loop, if the first number in the list is even, then remove the first number of the list
+Once we hit an odd number or we run out of numbers, return the modified list
+
+Write a function called delete_starting_evens() that has a parameter named lst.
+
+The function should remove elements from the front of lst until the front of the list is not even. The function should then return lst.
+
+For example if lst started as [4, 8, 10, 11, 12, 15], then delete_starting_evens(lst) should return [11, 12, 15].
+
+Make sure your function works even if every element in the list is even!
+
+Hint
+Use a while loop to check two things. First, check if the list has at least one element, using len(lst). Second, check to see if the first element is odd using mod (%). If both of those are True, slice off the first element of the list using lst = lst[1:].
+
+
+#Write your function here
+
+(Original Way to Solve it Using Len & While Loop)
+
+def delete_starting_evens(lst):
+  while len(lst) > 0 and lst[0] % 2 == 0:
+    lst = lst[1:]
+  return lst
+
+This ^ is reducing the size of the list
+
+After defining our method, we use a while loop to keep iterating as long as some provided conditions are true. We provide two conditions for the while loop to continue. We will keep iterating as long as there is at least one number left in the list len(lst) > 0 and if the first element in the list is even lst[0] % 2 == 0. If both of these conditions are true, then we replace the list with every element except for the first one using lst[1:]. Once the list is empty or we hit an odd number, the while loop terminates and we return the modified list.
+
+(Different While Loop Style of Answering Q)
+  i = 0
+  while i < len(lst):
+    if lst[i] % 2 == 1:
+      return lst[i:]
+    i += 1
+  return []
+
+^ this is using a pointer and incrementing pointer
+
+(Using For Loop)
+
+  new_list = []
+  found_odd = False
+  for num in lst:
+    if num % 2 == 1:
+      new_list.append(num)
+      found_odd = True
+    elif found_odd:
+      new_list.append(num)
+  return new_list
+
+
+
+#Uncomment the lines below when your function is done
+print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+print(delete_starting_evens([4, 8, 10]))
+'''
