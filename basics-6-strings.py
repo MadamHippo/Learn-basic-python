@@ -150,3 +150,43 @@ msg2 = 'Fred {verb} a {adjective} {noun}.'
 msg2.format(adjective='fluffy', verb='tickled', noun='hamster')
 # => 'Fred tickled a fluffy hamster.'
 '''
+
+#Backslashes (\) are used to escape characters in a Python string.
+
+def poem_title_card(title, poet):
+  return "The poem \"{}\" is written by {}.".format(title, poet)
+
+poem_title_card("I hear America Singing", "Walt Whitman")
+
+# Another Example
+return "Circle with radius {radius}".format(radius=self.radius)
+
+'''
+Format() 2
+
+.format() can be made even more legible for other people reading your code by including keywords. Previously with .format(), you had to make sure that your variables appeared as arguments in the same order that you wanted them to appear in the string, which just added unnecessary complications when writing code.
+
+By including keywords in the string and in the arguments, you can remove that ambiguity. Let’s look at an example.
+
+def favorite_song_statement(song, artist):
+    return "My favorite song is {song} by {artist}.".format(song=song, artist=artist)
+
+
+I don’t get this format() + range + len + for loop exercise --
+
+https://www.codecademy.com/paths/computer-science/tracks/cspath-cs-101/modules/cspath-python-strings/lessons/string-methods/exercises/review-ii
+
+A common Python technique is to use range(len(someList)) with a for loop to iterate
+over the indexes of a list. For example, enter the following into the interactive shell:
+>>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
+>>> for i in range(len(supplies)):
+print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+Index 0 in supplies is: pens
+Index 1 in supplies is: staplers
+Index 2 in supplies is: flame-throwers
+Index 3 in supplies is: binders
+Using range(len(supplies)) in the previously shown for loop is handy because the
+code in the loop can access the index (as the variable i) and the value at that index (as
+supplies[i]). Best of all, range(len(supplies)) will iterate through all the indexes of
+supplies, no matter how many items it contains.
+'''
