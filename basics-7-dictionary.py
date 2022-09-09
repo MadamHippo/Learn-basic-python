@@ -78,5 +78,14 @@ if key_to_check in building_heights:
   except KeyError:
     print("That key doesn't exist!")
 
+# .Get() Keys 
 
+# Dictionaries have a .get() method to search for a value instead of the my_dict[key] notation we have been using. If the key you are trying to .get() does not exist, it will return None by default:
 
+stack_id = user_ids.get("superStackSmash", 100000)
+print(stack_id)
+Things to Know About .Get():
+
+# The .get() function only returns the value associated with the key.
+
+# There is no key 3 in this dictionary, so the default provided to the .get() function, ["hamburger", "fries"], will be printed.
