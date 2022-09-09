@@ -37,3 +37,46 @@ sensors.update({"pantry": 22, "guest room": 25, "patio": 34})
 menu = {"oatmeal": 3, "avocado toast": 6, "carrot juice": 5, "blueberry muffin": 2}
 
 menu["oatmeal"] = 5
+
+'''
+Dictionary List Comprehensions:
+
+Python allows you to create a dictionary using a list comprehension, with this syntax:
+'''
+new_dict = {key:value for key, value in zip(key_list, value_list)}
+
+'''
+Accessing Dictionary Key
+
+Once you have a dictionary, you can access the values in it by providing the key. 
+
+If the key already exists, the old value will be overwritten if you use the assignment operator again.
+
+Attempting to access value with a key that doesn’t exist is a keyerror.
+
+Example format: 
+'''
+print(zodiac_elements["fire"])
+
+'''
+Checking if Item in Key
+
+One way to avoid this error is to first check if the key exists in the dictionary:
+'''
+key_to_check = "Landmark 81"
+ 
+if key_to_check in building_heights:
+  print(building_heights["Landmark 81"])
+
+# This will not throw an error, because key_to_check in building_heights will return False, and so we never try to access the key.
+
+# Try/Except Keys
+
+  key_to_check = "Landmark 81"
+  try:
+    print(building_heights[key_to_check])
+  except KeyError:
+    print("That key doesn't exist!")
+
+
+
