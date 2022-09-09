@@ -84,8 +84,6 @@ if key_to_check in building_heights:
 
 stack_id = user_ids.get("superStackSmash", 100000)
 print(stack_id)
-Things to Know About .Get():
 
-# The .get() function only returns the value associated with the key.
-
+# Things to Know About .Get(): The .get() function only returns the value associated with the key.
 # There is no key 3 in this dictionary, so the default provided to the .get() function, ["hamburger", "fries"], will be printed.
