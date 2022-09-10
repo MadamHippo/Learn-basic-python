@@ -87,3 +87,11 @@ print(stack_id)
 
 # Things to Know About .Get(): The .get() function only returns the value associated with the key.
 # There is no key 3 in this dictionary, so the default provided to the .get() function, ["hamburger", "fries"], will be printed.
+
+'''
+Delete a Key
+
+We can use .pop() to do this. Just like with .get(), we can provide a default value to return if the key does not exist in the dictionary. .pop() works to delete items from a dictionary, when you know the key value.
+To pop a value from one dictionary and assign it to another, you can use syntax like:
+ '''
+new_dict["new key"] = old_dict.pop("old key")
