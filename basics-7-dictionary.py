@@ -95,3 +95,13 @@ We can use .pop() to do this. Just like with .get(), we can provide a default va
 To pop a value from one dictionary and assign it to another, you can use syntax like:
  '''
 new_dict["new key"] = old_dict.pop("old key")
+
+
+# Get All Dict Keys
+
+# Sometimes we want to operate on all of the keys in a dictionary. Like if you only wanted names of students “Grace, Jeffrey Sylvia etc.” you can use keys.
+
+test_scores = {"Grace":[80, 72, 90], "Jeffrey":[88, 68, 81], "Sylvia":[80, 82, 84], "Pedro":[98, 96, 95], "Martin":[78, 80, 78], "Dina":[64, 60, 75]}
+
+users_test_scores = test_scores.keys()
+
