@@ -105,3 +105,49 @@ test_scores = {"Grace":[80, 72, 90], "Jeffrey":[88, 68, 81], "Sylvia":[80, 82, 8
 
 users_test_scores = test_scores.keys()
 
+
+
+# Get All Dict Values
+
+# Dictionaries have a .values() method that returns a dict_values object (just like a dict_keys object but for values!) 
+
+test_scores = {"Grace":[80, 72, 90], "Jeffrey":[88, 68, 81], "Sylvia":[80, 82, 84], "Pedro":[98, 96, 95], "Martin":[78, 80, 78], "Dina":[64, 60, 75]}
+ 
+for score_list in test_scores.values():
+  print(score_list)
+
+'''
+will yield:
+
+[80, 72, 90]
+[88, 68, 81]
+[80, 82, 84]
+[98, 96, 95]
+[78, 80, 78]
+[64, 60, 75]
+
+There is no built-in function to get all of the values as a list, but if you really want to, you can use:
+'''
+list(test_scores.values())
+
+
+
+# Get All Items
+
+# You can get BOTH the value and key with .item(). Each element of the dict_list returned by .items() is a tuple consisting of: (key, value)
+
+# so to iterate through, you can use this syntax:
+
+biggest_brands = {"Apple": 184, "Google": 141.7, "Microsoft": 80, "Coca-Cola": 69.7, "Amazon": 64.8}
+ 
+for company, value in biggest_brands.items():
+  print(company + " has a value of " + str(value) + " billion dollars. ")
+
+# which would yield this output:
+'''
+Apple has a value of 184 billion dollars.
+Google has a value of 141.7 billion dollars.
+Microsoft has a value of 80 billion dollars.
+Coca-Cola has a value of 69.7 billion dollars.
+Amazon has a value of 64.8 billion dollars.
+'''
