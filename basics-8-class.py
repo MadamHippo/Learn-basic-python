@@ -51,4 +51,44 @@ A class variable is a variable that’s the same for every instance of the class
 You can define a class variable by including it in the indented part of your class definition, and you can access all of an object’s class variables with object.variable syntax.
 
 '''
+class Musician:
+ title = "Rockstar"
+ 
+drummer = Musician()
+print(drummer.title)
+# prints "Rockstar"
+
+'''
+Above we defined the class Musician, then instantiated drummer to be an object of type Musician. We then printed out the drummer’s .title attribute, which is a class variable that we defined as the string “Rockstar”.
+
+If we defined another musician, like guitarist = Musician() they would have the same .title attribute.
+
+Here’s another example:
+'''
+class Grade:
+  minimum_passing = 65 #Class Variable...it's a variable that defines a specific attribute or property for a class and may be referred to as a member variable or static member variable.
+passing_grade = Grade()
+print(passing_grade.minimum_passing)
+#prints out 65
+ 
+highest_score = Grade()
+print(highest_score.perfect_score)
+#prints 100
+
+# In Python, class variables are defined outside of all methods and have the same value for every instance of the class.
+
+# Class variables are accessed with the instance.variable or class_name.variable syntaxes.
+      
+class my_class:
+  class_variable = "I am a Class Variable!"
+  
+x = my_class()
+y = my_class()
+ 
+print(x.class_variable) #I am a Class Variable!
+print(y.class_variable) #I am a Class Variable!
+ 
+#basically the same exact example as above with grade()
+
+
 
