@@ -133,6 +133,123 @@ charlie.bark()
 # This will output "Ham-Ham"
  
 print(charlie.bark())
-      
-# We define methods similarly to functions, except that they are indented to be part of the class.
 
+
+# Another Complete Example w/ Personal Notes
+      
+class Circle: #this is a class. Class is a template that has variables and functions associated with it. It reduces code. A class must be instantiated, we must create an instance of the class, in order to breathe life into the schematic.
+  pi = 3.14 #this is a variable. We're defining a class. 3.14 is a value. variables are used to store data related to the given class above.
+  def area(self, radius): # area is Method with 2 arguments/objects. Self is a special parameter we use in methods to access the class variable right above. Without Self the variable is out of local scope. Self is implicitly passed.
+    area = Circle.pi * radius ** 2 # Pi here is a class variable. You can access it as an Attribute of the class by using a . (period)
+Attribute means regarding something being caused by something.
+Radius ** 2 is a type of expression.
+    return area  #you have to return a method.
+ 
+circle = Circle() # Circle() creates an Instance. Similar to calling functions. The circle is a variable. A class instance is also called an object. () = I’m calling another piece of code, like an argument.
+ 
+pizza_area = circle.area(12 / 2)  #We are accessing the class variable with .area(). The data held by an object is referred to as an Instance Variable or Instance Attribute. Instance variables aren’t shared by all instances of a class — they are variables that are specific to the object they are attached to - in this case the object is 12 / 2 and the instance variable is area(). 
+circle = Circle() the class and area is def as self, radius. Self is the Instance of class above. And dividing by 2 is because 12 (measurement of pizza) is the diameter instead of radius.
+teaching_table_area = circle.area(36 / 2)
+We're calling circle.area (instance.method) and using 36/2 as the argument.
+When we want to create something from the class variable then that's called instances. To access a class variable we write the instance name and . [period] And then the variable we want.
+round_room_area = circle.area(11460 / 2)
+Print (instance.variable) #accessing a class variable. Class variables are accessed with the instance.variable or class_name.variable syntaxes.
+
+      
+'''
+The Class Constructors
+
+There are several methods that we can define in a Python class that have special behavior. These methods are sometimes called “magic,” because they behave differently from regular methods. Another popular term is dunder methods, so-named because they have two underscores (double-underscore abbreviated to “dunder”) on either side of them.
+
+constructor __init__ gives object construction directions.
+
+These are:
+__init__() 
+//This method is used to initialize a newly created object. It is called every time the class is instantiated.
+Methods that are used to prepare an object being instantiated are called constructors. constructor in Python are usually talking about the __init__() method.
+'''
+class Shouter:
+  def __init__(self):
+    print("HELLO?!")
+
+shout1 = Shouter()
+# prints "HELLO?!"
+
+shout2 = Shouter()
+# prints "HELLO?!"
+      
+'''
+Above we created a class called Shouter and every time we create an instance of Shouter the program prints out a shout.
+Shouter() looks a lot like a function call, doesn’t it? If it’s a function, can we pass parameters to it? We absolutely can, and those parameters will be received by the __init__() method.
+'''
+      
+class Shouter:
+  def __init__(self, phrase):
+    # make sure phrase is a string
+    if type(phrase) == str:
+ 
+      # then shout it out
+      print(phrase.upper())
+ 
+shout1 = Shouter("shout")
+# prints "SHOUT"
+ 
+shout2 = Shouter("shout")
+# prints "SHOUT"
+ 
+shout3 = Shouter("let it all out")
+# prints "LET IT ALL OUT"
+
+'''
+Above we’ve updated our Shouter class to take the additional parameter phrase. When we created each of our objects we passed an argument to the constructor. The constructor takes the argument phrase and, if it’s a string, prints out the all-caps version of phrase.
+'''
+      
+      
+'''
+Class & instance variables
+
+The data held by an object is referred to as an instance variable. 
+Instance variables aren’t shared by all instances of a class — they are variables that are specific to the object they are attached to.
+We can instantiate two different objects from this class, fake_dict1 and fake_dict2, and assign instance variables to these objects using the same attribute notation that was used for accessing class variables.
+'''
+fake_dict1 = FakeDict()
+fake_dict2 = FakeDict()
+ 
+fake_dict1.fake_key = "This works!"
+fake_dict2.fake_key = "This too!"
+ 
+# Let's join the two strings together!
+working_string = "{} {}".format(fake_dict1.fake_key, fake_dict2.fake_key)
+print(working_string)
+# prints "This works! This too!"
+
+'''
+We’ve learned:
+Class  is a schematic for a data  type.
+Object is an instance of a class.
+But why differentiate the 2 if each object must have methods + class variables the class already have??
+Answer: because each instance of class holds different kinds of data.
+
+Object oriented programming is bundling of related data and functionality. OOP grouping data and functionality inside an object, it's also called Encapsulation. In functional programming, functions and data are separate.
+
+Class is a schematic for a data type.
+Object is an instance of a class.
+'''
+ 
+'''
+Objects = Instances
+
+(A form of)...Method = Constructor
+
+Super()__init__ sets the properties of instances.
+
+Super() refers to the Parent class.
+
+__init__ refers to the Person's conductor which will let us set the properties of the conductor...like name, age.
+
+Then we can create objects like own property and inherit method from both parent and conductor.
+
+A Getter method is actually an Accessor Method that returns the value of an instance variable. 
+
+While a Setter method is also called a Mutator method. It is used to set the value of an instance variable in a Python class.
+'''
