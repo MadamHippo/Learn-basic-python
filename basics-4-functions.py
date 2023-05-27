@@ -190,7 +190,8 @@ After defining our method, we use a while loop to keep iterating as long as some
 
 
 
-#Uncomment the lines below when your function is done
+# Uncomment the lines below when your function is done
+
 print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
 print(delete_starting_evens([4, 8, 10]))
 '''
